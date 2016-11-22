@@ -1,9 +1,9 @@
-<?php exit;?>a:3:{s:8:"template";a:9:{i:0;s:50:"/data/wwwroot/fuck/wap/tpl/default/user_login.html";i:1;s:50:"/data/wwwroot/fuck/wap/tpl/default/inc/header.html";i:2;s:61:"/data/wwwroot/fuck/wap/tpl/default/inc/sui_mobile_header.html";i:3;s:60:"/data/wwwroot/fuck/wap/tpl/default/inc/sui_mobile_title.html";i:4;s:66:"/data/wwwroot/fuck/wap/tpl/default/inc/sui_mobile_user_status.html";i:5;s:57:"/data/wwwroot/fuck/wap/tpl/default/inc/header_search.html";i:6;s:50:"/data/wwwroot/fuck/wap/tpl/default/inc/footer.html";i:7;s:48:"/data/wwwroot/fuck/wap/tpl/default/inc/left.html";i:8;s:57:"/data/wwwroot/fuck/wap/tpl/default/inc/sui_mobile_js.html";}s:7:"expires";i:1479809192;s:8:"maketime";i:1479805592;}	<!DOCTYPE html>
+<?php exit;?>a:3:{s:8:"template";a:9:{i:0;s:53:"/data/wwwroot/fuck/wap/tpl/default/user_register.html";i:1;s:50:"/data/wwwroot/fuck/wap/tpl/default/inc/header.html";i:2;s:61:"/data/wwwroot/fuck/wap/tpl/default/inc/sui_mobile_header.html";i:3;s:60:"/data/wwwroot/fuck/wap/tpl/default/inc/sui_mobile_title.html";i:4;s:66:"/data/wwwroot/fuck/wap/tpl/default/inc/sui_mobile_user_status.html";i:5;s:57:"/data/wwwroot/fuck/wap/tpl/default/inc/header_search.html";i:6;s:46:"/data/wwwroot/fuck/wap/tpl/default/footer.html";i:7;s:48:"/data/wwwroot/fuck/wap/tpl/default/inc/left.html";i:8;s:57:"/data/wwwroot/fuck/wap/tpl/default/inc/sui_mobile_js.html";}s:7:"expires";i:1479809170;s:8:"maketime";i:1479805570;}	<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>会员登录 - VK维客众筹 - 猫力中国</title>
+    <title>会员注册 - VK维客众筹 - 猫力中国</title>
     
      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=0,minimum-scale=0.5">
     <link rel="shortcut icon" href="/favicon.ico">
@@ -16,7 +16,7 @@
         var APP_ROOT = 'http://115.28.42.193/wap';
         var APP_ROOT_ORA = 'http://115.28.42.193';
                 var send_span = 2000;
-        		var __HASH_KEY__ = "QzgEdEhHlrAMVUdZFPwtgkfnXszqfRvrBGcWrJhTtbjUEdBDrS";
+        		var __HASH_KEY__ = "lUCXdbxZUOfQUvBjTAQcrgEBWFbVrwVGsVXQGiLFmFPJtGaRKp";
         var isapp = '';
         var is_sdk = '0';
     </script>
@@ -30,14 +30,14 @@
 </head>
 <body>
     <!-- page 开始 -->
-    <div class="page" id="user-login" >
+    <div class="page" id="user-register" >
         <!-- header 开始 -->
     	<header class="bar bar-nav header_nav">
 		<a class="button button-link button-nav pull-left back" href="http://115.28.42.193/wap/index.php?ctl=project&act=choose" data-transition="slide-out">
 	  <span class="icon icon-left"></span>
 	  	返回
 	</a>
-			<h1 class="title pull-left">会员登录</h1>
+			<h1 class="title pull-left">会员注册</h1>
 		<a class="button  button-link button-nav  pull-right open-panel" data-panel='#panel-left-box'>
 		<span class="icon icon-menu"></span>
 	</a>
@@ -204,20 +204,48 @@
         $obj.parent().parent().find("input[name='type']").val($(this).attr("livalue"));
         $("#top_search_bd li").eq(i).show().siblings().hide();
     });
-</script><!-- 登录 开始 -->  
-<section class="login p10 tc">
-	<form id="user_login_form" name="user_login_form" action="/wap/index.php?ctl=user&act=do_login">
-		<input class="input100 sizing" type="text"  name="email" id="email" placeholder="手机号/会员名/邮箱" required="required">
-		<input class="input100 sizing" type="password"  autocomplete="off" name="user_pwd"  id="user_pwd" placeholder="输入登录密码" required="required">
-		<div class="blank10"></div>
-		<input class="ui-button theme_color" type="button" name="submit_form" value="登录" rel="ui-button">
-		<input type="hidden" name="ajax" value="1">
+</script><style type="text/css">
+	.btn_yzm{width:108px;float:none;font-size:14px;letter-spacing:0;}
+</style>
+<!--login-->  
+<div class="blank15"></div>
+<section class="user_register">
+  <form id="user_register_form" name="user_register_form" action="/wap/index.php?ctl=user&act=do_register">
+  	<div class="ul_block">
+  		<ul>
+  			<li class="webkit-box">
+				<label class="input_lable">会员名称</label>
+				<input type="text" placeholder="请输入会员名称" name="user_name" value="" class="textbox webkit-box-flex" />
+			</li>
+			<li class="webkit-box">
+				<label class="input_lable">登录密码</label>
+				<input type="password"  autocomplete="off" placeholder="请输入登录密码" name="user_pwd" value="" class="textbox webkit-box-flex" />
+			</li>
+			<li class="webkit-box">
+				<label class="input_lable">确认密码</label>
+				<input type="password"  autocomplete="off" placeholder="请输入确认密码" name="confirm_user_pwd" value="" class="textbox webkit-box-flex" />
+			</li>
+						<li class="webkit-box">
+ 				<label class="input_lable">电子邮箱:</label>
+				<input type="text" placeholder="输入电子邮箱" name="email" value="" class="textbox webkit-box-flex" />
+ 			</li>
+												  		</ul>
+  	</div>
+	<div class="mod_main"> 
+		<input class="ui-button theme_color" type="button" name="submit_form"  value="注册" rel="ui-button">
+		<input type="hidden" value="1" name="ajax" />
 		<input type="hidden" name="target" value="">
-	</form>
-	<a class="f_l rgst f_red pt10" href="#" onclick="RouterURL('/wap/index.php?ctl=user&act=register','#user-register',2);">注册账号</a>
-		<div class="blank"></div>
+	</div>
+  </form>
 </section>
-<!-- 登录 结束 -->  
+<div class="blank15"></div>
+<script>
+			var is_mobile=0;
+		var is_mobile_verify=0;
+				var is_email=1;
+					var is_email_verify=0;
+			</script>
+<!-- user_register.js -->
 	</div>
 	<!-- content 结束 -->
 	<!-- footer-nav 开始 -->
@@ -235,7 +263,7 @@
 	      	<i class="icon iconfont">&#xe604;</i>
      	 	<span class="tab-label">投资人</span>
 	    </a>
-	     	 	<a class="tab-item active"  onclick="RouterURL('/wap/index.php?ctl=user&act=login','#user-login',2);">
+	     	 	<a class="tab-item "  onclick="RouterURL('/wap/index.php?ctl=user&act=login','#user-login',2);">
 	      	<i class="icon iconfont">&#xe602;</i>
      	 	<span class="tab-label">登录</span>
 	    </a>
@@ -243,82 +271,6 @@
   	<!-- footer-nav 结束 -->
 </div>
 <!-- page 结束 -->
-<div class="panel-overlay"></div>
-<!-- Left Panel with Reveal effect -->
-<div class="panel panel-left panel-reveal theme-dark" id='panel-left-box'>
-    <div class="content-block">
-		<p id="login_status_info">您好，您还没有登录哦</p>
- 		<input type="hidden" id="login_status" value="0">
-    </div>
-    <div class="list-block">
-    	<ul>
-            <li class="current" >
-                <div class="item-content">
-                    <div class="item-media"><i class="icon iconfont">&#xe62a;</i></div>
-                    <div class="item-inner" id="login_status_url">
-                                                <a href="#" onclick="RouterURL('/wap/index.php?ctl=user&act=login','#user-login');"   class="close-panel ">登录/注册</a>
-                                            </div>
-                </div>
-            </li>
-            <li >
-                <div class="item-content">
-                    <div class="item-media"><i class="icon iconfont">&#xe600;</i></div>
-                    <div class="item-inner">
-                        <a href="#" onclick="RouterURL('/wap/index.php','#index-index',2);" class="close-panel">网站首页</a>
-                    </div>
-                </div>
-            </li>
-                        <li >
-                <div class="item-content">
-                    <div class="item-media"><i class="icon iconfont">&#xe615;</i></div>
-                    <div class="item-inner">
-                        <a href="#" onclick="RouterURL('/wap/index.php?ctl=deals','#deals-index',2);" class="close-panel">回报众筹</a>
-                    </div>
-                </div>
-            </li>
-            <li >
-                <div class="item-content">
-                    <div class="item-media"><i class="icon iconfont">&#xe62d;</i></div>
-                    <div class="item-inner">
-                        <a href="#" onclick="RouterURL('/wap/index.php?ctl=deals&act=stock','#deals-stock',2);" class="close-panel">股权众筹</a>
-                    </div>
-                </div>
-            </li>
-                        <li >
-                <div class="item-content">
-                    <div class="item-media"><i class="icon iconfont">&#xe62d;</i></div>
-                    <div class="item-inner">
-                        <a href="#" onclick="RouterURL('/wap/index.php?ctl=stock_transfer','#stock_transfer-index',2);" class="close-panel">股权转让</a>
-                    </div>
-                </div>
-            </li>
-                                             	<li >
-                <div class="item-content">
-                    <div class="item-media"><i class="icon iconfont">&#xe621;</i></div>
-                    <div class="item-inner">
-                        <a href="#" onclick="RouterURL('/wap/index.php?ctl=deals&act=selfless','#deals-selfless',2);" class="close-panel">公益众筹</a>
-                    </div>
-                </div>
-            </li>
-                        <li >
-                <div class="item-content">
-                    <div class="item-media"><i class="icon iconfont" style="font-size:1rem;">&#xe62b;</i></div>
-                    <div class="item-inner">
-                        <a href="#" onclick="RouterURL('/wap/index.php?ctl=investor&act=invester_list','#investor-invester_list',2);" class="close-panel">天使投资人</a>
-                    </div>
-                </div>
-            </li>
-            <li >
-                <div class="item-content">
-                    <div class="item-media"><i class="icon iconfont">&#xe62e;</i></div>
-                    <div class="item-inner">
-                        <a href="#" onclick="RouterURL('/wap/index.php?ctl=article_cate','#article_cate-index',2);" class="close-panel">新闻资讯</a>
-                    </div>
-                </div>
-            </li>
-			        </ul>
-    </div>
-</div>
  
 <script>
   //初始化侧栏禁止滑动打开
